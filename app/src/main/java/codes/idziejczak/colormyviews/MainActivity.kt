@@ -22,9 +22,10 @@ class MainActivity : AppCompatActivity() {
             R.id.box_three_text -> view.setBackgroundResource(R.drawable.ic_baseline_check_24)
             R.id.box_four_text -> view.setBackgroundResource(R.drawable.ic_baseline_desktop_windows_24)
             R.id.box_five_text -> view.setBackgroundResource(R.drawable.ic_baseline_done_all_24)
-            R.id.red_button -> box_three_text.setBackgroundResource(R.color.my_red)
-            R.id.yellow_button -> box_four_text.setBackgroundResource(R.color.my_yellow)
-            R.id.green_button -> box_five_text.setBackgroundResource(R.color.my_green)
+            R.id.box_six_text -> view.setBackgroundColor(Color.BLUE)
+            R.id.box_seven_text -> view.setBackgroundColor(Color.RED)
+            R.id.box_eight_text -> view.setBackgroundColor(Color.YELLOW)
+            R.id.box_nine_text -> view.setBackgroundColor(Color.DKGRAY)
             else -> view.setBackgroundColor(Color.LTGRAY)
         }
     }
@@ -36,16 +37,15 @@ class MainActivity : AppCompatActivity() {
         val boxThreeText = findViewById<TextView>(R.id.box_three_text)
         val boxFourText = findViewById<TextView>(R.id.box_four_text)
         val boxFiveText = findViewById<TextView>(R.id.box_five_text)
+        val boxSixText = findViewById<TextView>(R.id.box_six_text)
+        val boxSevenText = findViewById<TextView>(R.id.box_seven_text)
+        val boxEightText = findViewById<TextView>(R.id.box_eight_text)
+        val boxNineText = findViewById<TextView>(R.id.box_nine_text)
 
         val rootConstraintLayout = findViewById<View>(R.id.constraint_layout)
 
-        val redButton = findViewById<Button>(R.id.red_button)
-        val yellowButton = findViewById<Button>(R.id.yellow_button)
-        val greenButton = findViewById<Button>(R.id.green_button)
-
         val clickableViews: List<View> =
-            listOf(boxOneText, boxTwoText, boxThreeText, boxFourText, boxFiveText, rootConstraintLayout,
-                redButton, yellowButton, greenButton)
+            listOf(boxOneText, boxTwoText, boxThreeText, boxFourText, boxFiveText, boxSixText, boxSevenText, boxEightText, boxNineText, rootConstraintLayout)
         clickableViews.forEach {item ->
             item.setOnClickListener { makeColored(it) }
         }
