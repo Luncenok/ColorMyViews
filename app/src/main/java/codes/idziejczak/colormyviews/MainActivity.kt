@@ -15,11 +15,11 @@ class MainActivity : AppCompatActivity() {
 
     fun makeColored(view: View) {
         when (view.id) {
-            R.id.box_one_text -> view.setBackgroundColor(Color.DKGRAY)
-            R.id.box_two_text -> view.setBackgroundColor(Color.GRAY)
-            R.id.box_three_text -> view.setBackgroundColor(Color.BLUE)
-            R.id.box_four_text -> view.setBackgroundColor(Color.MAGENTA)
-            R.id.box_five_text -> view.setBackgroundColor(Color.BLUE)
+            R.id.box_one_text -> view.setBackgroundResource(R.drawable.ic_baseline_accessibility_new_24)
+            R.id.box_two_text -> view.setBackgroundResource(R.drawable.ic_baseline_add_box_24)
+            R.id.box_three_text -> view.setBackgroundResource(R.drawable.ic_baseline_check_24)
+            R.id.box_four_text -> view.setBackgroundResource(R.drawable.ic_baseline_desktop_windows_24)
+            R.id.box_five_text -> view.setBackgroundResource(R.drawable.ic_baseline_done_all_24)
             else -> view.setBackgroundColor(Color.LTGRAY)
         }
     }
